@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Profile from '../views/Profile.vue'
+import Feed from '../views/Feed.vue'
+
 
 
 const routes = [
@@ -8,6 +10,11 @@ const routes = [
     path: '/',
     name: 'home',
     component: Profile
+  },
+  {
+    path: '/feed',
+    name: 'feed',
+    component: Feed
   },
   {
     path: '/about',

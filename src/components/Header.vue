@@ -6,7 +6,7 @@
     
     <nav class="d-flex p-0">
       <div class="nav_item">
-        <a class="navitem__text" href="##">
+        <a class="navitem__text" href="/Feed">
           <img src="../assets/rss.png" alt="">FEED
         </a>
       </div>
