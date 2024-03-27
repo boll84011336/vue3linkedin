@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Profile from '../views/Profile.vue'
 import Feed from '../views/Feed.vue'
+import NetWork from '../views/NetWork.vue'
+
 
 
 
@@ -15,6 +17,11 @@ const routes = [
     path: '/feed',
     name: 'feed',
     component: Feed
+  },
+  {
+    path: '/netWork',
+    name: 'netWork',
+    component: NetWork
   },
   {
     path: '/about',

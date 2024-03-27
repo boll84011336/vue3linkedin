@@ -6,12 +6,12 @@
     
     <nav class="d-flex p-0">
       <div class="nav_item">
-        <a class="navitem__text" href="/Feed">
+        <a class="navitem__text" href="/feed">
           <img src="../assets/rss.png" alt="">FEED
         </a>
       </div>
       <div class="nav_item">
-        <a class="navitem__text" href="##">
+        <a class="navitem__text" href="/network">
           <img src="../assets/users.png" alt="">NETWORK
         </a>
       </div>
