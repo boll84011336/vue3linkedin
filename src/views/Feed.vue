@@ -83,7 +83,6 @@ export default({
     .feed_container {
       width: 850px;
       .add_post {
-        height: 135px;
         margin-bottom: 33px;
         text-align: left;
         background-color: #fff;
