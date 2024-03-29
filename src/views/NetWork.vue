@@ -108,8 +108,8 @@ export default {
             <div class="recent_detail">
               <div class="title">Audrey Alexander</div>
               <div class="content">Team lead at Google</div>
-              <div class="times">Yesterday, 14:30</div>
             </div>
+            <div class="times">Yesterday, 14:30</div>
           </div>
 
           <!-- 72 -->
@@ -118,8 +118,8 @@ export default {
             <div class="recent_detail">
               <div class="title">Kyle Fisher</div>
               <div class="content">Product designer at Commandor Corp</div>
-              <div class="times">Yesterday, 12:03</div>
             </div>
+            <div class="times">Yesterday, 12:03</div>
           </div>
 
         </div>
@@ -132,8 +132,8 @@ export default {
             <div class="recent_detail">
               <div class="title">Darlene Black</div>
               <div class="content">HR-manager, 10 000 connections</div>
-              <div class="times">26 aug, monday</div>
             </div>
+            <div class="times">26 aug, monday</div>
           </div>
 
           <!-- 72 -->
@@ -142,8 +142,8 @@ export default {
             <div class="recent_detail">
               <div class="title">Eduardo Russell</div>
               <div class="content">Full stack developer at Yandex</div>
-              <div class="times">25 aug, sunday</div>
             </div>
+            <div class="times">25 aug, sunday</div>
           </div>
 
         </div>
@@ -314,10 +314,14 @@ export default {
               }
             }
             .times {
+              width: 200px;
               font-size: 12px;
               color:gray;
-              position: absolute;
-              bottom:-10px;
+              display: flex;
+              justify-content: end;
+              align-items: end;
+              // position: absolute;
+              // bottom:-10px;
             }
           
           }
