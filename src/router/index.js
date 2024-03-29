@@ -3,9 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import Profile from '../views/Profile.vue'
 import Feed from '../views/Feed.vue'
 import NetWork from '../views/NetWork.vue'
-
-
-
+import Jobs from '../views/Jobs.vue'
 
 const routes = [
   {
@@ -19,9 +17,14 @@ const routes = [
     component: Feed
   },
   {
-    path: '/netWork',
+    path: '/network',
     name: 'netWork',
     component: NetWork
+  },
+  {
+    path: '/jobs',
+    name: 'jobs',
+    component: Jobs
   },
   {
     path: '/about',

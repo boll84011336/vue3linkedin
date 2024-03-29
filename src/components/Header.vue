@@ -16,7 +16,7 @@
         </a>
       </div>
       <div class="nav_item">
-        <a class="navitem__text" href="##">
+        <a class="navitem__text" href="/jobs">
           <img src="../assets/briefcase.png" alt="">JOBS
         </a>
       </div>
