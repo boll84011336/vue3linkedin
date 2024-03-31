@@ -5,12 +5,13 @@
     </router-link>
     
     <nav class="d-flex p-0">
-      <div class="nav_item">
-        <a class="navitem__text" href="/feed">
-          <img src="../assets/rss.png" alt="">FEED
-        </a>
+      <div class="nav_item" v-for="link in headerLink" :key="link.url">
+        <router-link class="navitem__text" :to=link.url>
+          <img :alt=link.title :src=link.img />
+          <span>{{ link.title }}</span>
+        </router-link>
       </div>
-      <div class="nav_item">
+      <!-- <div class="nav_item">
         <a class="navitem__text" href="/network">
           <img src="../assets/users.png" alt="">NETWORK
         </a>
@@ -29,7 +30,7 @@
         <a class="navitem__text" href="##">
           <img src="../assets/bell.png" alt="">NOTICES
         </a>
-      </div>
+      </div> -->
 
       <div class="search">
         <div class="w-100 d-flex align-items-center">
@@ -76,9 +77,22 @@
 </template>
 
 <script>
+import { ref } from 'vue';
+
 export default {
   name: "Header",
-  // Your component's logic goes here
+  setup() {
+    const headerLink = ref([
+        { img: require('@/assets/rss.png'), title:"FEED", url: "/feed" },
+        { img: require('@/assets/users.png'), title:"NETWORK", url: "/network" },
+        { img: require('@/assets/briefcase.png'), title:"JOBS", url: "/jobs" },
+        { img: require('@/assets/message-square.png'), title:"CHAT", url: "/chat" },
+        { img: require('@/assets/bell.png'), title:"NOTICES", url: "/notices" },
+      ])
+    return {
+      headerLink
+    }
+  }
 };
 </script>
 
