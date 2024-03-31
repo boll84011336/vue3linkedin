@@ -1,9 +1,12 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Profile from '../views/Profile.vue'
 import Feed from '../views/Feed.vue'
 import NetWork from '../views/NetWork.vue'
 import Jobs from '../views/Jobs.vue'
+import Chat from '../views/Chat.vue'
+import Notices from '../views/Notices.vue'
+
 
 const routes = [
   {
@@ -27,6 +30,16 @@ const routes = [
     component: Jobs
   },
   {
+    path: '/chat',
+    name: 'chat',
+    component: Chat
+  },
+  {
+    path: '/notices',
+    name: 'notices',
+    component: Notices
+  },
+  {
     path: '/about',
     name: 'about',
     // route level code-splitting
@@ -37,7 +50,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHashHistory(process.env.BASE_URL),
   routes
 })
 
