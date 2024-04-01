@@ -8,10 +8,57 @@ export default {
     Company
 	},
   setup() {
-    const feature = ref();
+		const companyList = ref([
+			{ 
+				img: require('@/assets/experience/2.png'), 
+				title: "UX/UI designer", 
+				companyName: "Upwork",
+				Location: "Remote only",
+				descript: "On Upwork you'll find a range of top freelancers and agencies, from developers and development agencies to designers and creative agencies, copywriters",
+			},
+			{ 
+				img: require('@/assets/jobs/fb.png'),
+			  title:"Product designer", 
+			 	companyName: "Facebook",
+				Location: "CA, USA",
+				descript: "Founded in 2004, Facebook's mission is to give people the power to build community and bring the world closer together. People use our products to stay",
+			},
+			{ 
+				img: require('@/assets/jobs/google.png'), 
+				title:"Part-time UX designer", 
+				companyName: "Google",
+				Location: "International",
+				descript: "Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking."
+			},
+			{ 
+				img: require('@/assets/jobs/linkined.png'), 
+			  title:"Web designer",
+				companyName: "LinkedIn",
+				Location: "International",
+				descript: "LinkedIn, the world's largest professional network. The mission of LinkedIn is simple: connect the world's professional.",
+			}
+		]);
+
+		const newJobList = ref([
+			{ 
+				img: require('@/assets/jobs/ig.png'), 
+			  title:"UI designer",
+				companyName: "Instagram",
+				Location: "CA, USA",
+				descript: "Instagram is a photo and video-sharing social networking service owned by Facebook, Inc. ",
+			},
+			{ 
+				img: require('@/assets/jobs/pi.png'), 
+			  title:"Product designer",
+				companyName: "Periscope",
+				Location: "Remote only",
+				descript: "eriscope is a live video streaming app for Android and iOS developed by Kayvon Beykpour and Joe Bernstein and acquired by Twitter before launch in 2015. ",
+			}
+		]);
 
     return {
-      
+      companyList,
+			newJobList
     };
   },
 };
@@ -19,7 +66,7 @@ export default {
 
 <template>
   <div class="jobs">
-    <div class="search_job">
+    <div class="search_job mb-4">
       <div class="search_title">
 				<p>Your dream job is here</p>
 			</div>
@@ -29,9 +76,27 @@ export default {
 			</div>
     </div>
 
+		<!-- 工作區塊 -->
+		<div class="line-with-text d-flex align-items-center">
+			<hr class="line">
+			<div class="text"><span class="t-blue ps-2">JOBS FOR YOU</span></div>
+			<hr class="line">
+		</div>
+
     <!-- Job list -->
-		<Company />	
-  </div>
+		<Company class="mt-4" v-for="item in companyList" :key="item.title" :company="item"/>
+		
+		<!-- 新工作區塊 -->
+		<div class="line-with-text d-flex align-items-center">
+			<hr class="line">
+			<div class="text"><span class="t-blue ps-2">New Jobs</span></div>
+			<hr class="line">
+		</div>
+
+		<!-- New Job list -->
+		<Company class="mt-4" v-for="item in newJobList" :key="item.title" :company="item"/>
+
+	</div>
 </template>
 
 
@@ -70,6 +135,14 @@ export default {
 				}
 			}
     }
+		.text {
+			font-weight: 600;
+			font-family: Gotham Pro;
+		}
+		.line {
+			width: 360px;
+			border-top: 1px solid gray;
+		} 
   }
 
   
