@@ -3,7 +3,7 @@
     <router-link class="logo" to="/">
       <img alt="logoImg" src="../assets/logo.png" />
     </router-link>
-    
+
     <nav class="d-flex p-0">
       <div class="nav_item" v-for="link in headerLink" :key="link.url">
         <router-link class="navitem__text" :to=link.url>
@@ -35,13 +35,7 @@
       <div class="search">
         <div class="w-100 d-flex align-items-center">
           <img src="../assets/search.png" alt="search" />
-          <input
-          type="text"
-          class="w-100"
-          placeholder="Search"
-          aria-label="Username"
-          aria-describedby="basic-addon1"
-        />
+          <input type="text" class="w-100" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1" />
         </div>
       </div>
     </nav>
@@ -83,12 +77,12 @@ export default {
   name: "Header",
   setup() {
     const headerLink = ref([
-        { img: require('@/assets/rss.png'), title:"FEED", url: "/feed" },
-        { img: require('@/assets/users.png'), title:"NETWORK", url: "/network" },
-        { img: require('@/assets/briefcase.png'), title:"JOBS", url: "/jobs" },
-        { img: require('@/assets/message-square.png'), title:"CHAT", url: "/chat" },
-        { img: require('@/assets/bell.png'), title:"NOTICES", url: "/notices" },
-      ])
+      { img: require('@/assets/rss.png'), title: "FEED", url: "/feed" },
+      { img: require('@/assets/users.png'), title: "NETWORK", url: "/network" },
+      { img: require('@/assets/briefcase.png'), title: "JOBS", url: "/jobs" },
+      { img: require('@/assets/message-square.png'), title: "CHAT", url: "/chat" },
+      // { img: require('@/assets/bell.png'), title:"NOTICES", url: "/notices" },
+    ])
     return {
       headerLink
     }
@@ -100,13 +94,16 @@ export default {
 * {
   color: #181818;
 }
+
 header {
   height: 80px;
+
   .logo {
     height: 80px;
     width: 130px;
     border-right: 1px solid #F4F4F4;
     margin-right: 13px;
+
     img {
       margin: 17px 38px;
       width: 46px;
@@ -119,52 +116,61 @@ header {
       width: 90px;
       height: 80px;
       padding: 17px 33px;
+
       a {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-decoration: none;
         font-size: medium;
+
         img {
-        margin-bottom: 5px;
+          margin-bottom: 5px;
         }
       }
     }
+
     .search {
       width: 367px;
       display: flex;
       border-right: 1px solid #f4f4f4;
       padding-right: 20px;
-      div{
+
+      div {
         img {
           width: 24px;
           height: 24px;
           margin-right: 10px;
         }
+
         input {
           height: 30px;
           padding-left: 10px;
           border: none;
         }
-        
+
       }
     }
   }
+
   .person {
     width: 330px;
     margin-left: 30px;
     margin-left: 30px;
     padding-top: 17px;
     border-right: 1px solid #f4f4f4;
+
     div {
       .personImg {
         margin-right: 15px;
       }
+
       .intro {
         .watchNum {
           .view_quantity {
             color: #747474;
           }
+
           .statistics {
             color: #02b033;
           }
@@ -172,16 +178,19 @@ header {
       }
     }
   }
+
   .more {
     width: 90px;
     height: 80px;
     padding: 17px 33px;
     border-right: 1px solid #f4f4f4;
+
     div {
       a {
         text-decoration: none;
         font-size: medium;
         font-weight: bold;
+
         img {
           width: 24px;
           height: 24px;
@@ -189,9 +198,10 @@ header {
         }
       }
     }
-    
+
   }
 }
+
 .nav_item:nth-child(5) {
   margin-right: 20px;
   border-right: 1px solid #f4f4f4;
