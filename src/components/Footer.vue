@@ -35,17 +35,17 @@
 
       <div class="block2">
         <h6 class="fast_access_title">Fast access</h6>
-        <div class="fast_access_body one d-flex">
-          <div class="questions">
-            <a class="">Questions?</a>
+        <div class="fast_access_body d-flex">
+          <button class="questions w-100 d-flex justify-content-between align-items-center">
+            <span>Questions?</span>
             <img src="../assets/help.png" alt="Questions">
-          </div>
+          </button>
         </div>
         <div class="fast_access_body mt-3">
-          <div class="settings">
-            <a class="">Settings?</a>
+          <button class="settings w-100 d-flex justify-content-between align-items-center">
+            <span>Settings?</span>
             <img src="../assets/settings.png" alt="Settings">
-          </div>
+          </button>
         </div>
       </div>
 
@@ -154,38 +154,36 @@ export default {
   }
 
   .fast_access_body {
-    width: 170px;
-    height: 32px;
-    border: 1px solid #0275B1;
-    border-radius: 4px;
-    .questions {
-      a {
-        text-decoration: none;
-        padding: 11px 43px 10px 15px;
-      }
+    button {
+      width: 170px;
+      height: 32px;
+      border-radius: 4px;
+      padding: 0 15px;
       img {
         width: 16px;
       }
     }
+    .questions {
+      border: none;
+      background: #0275B1;
+      color: #fff;
+    }
     .settings {
-      a {
-        text-decoration: none;
-        padding: 11px 58px 10px 15px;
+      background: #fff;
+      border: 1px solid #0275B1;
+      span {
         color:#0275B1;
-      }
-      img {
-        width: 16px;
       }
     }
    
   }
 
-  .one {
-    background-color: #0275B1;
-    a {
-      color:#fff;
-    }
-  } 
+  // .one {
+  //   background-color: #0275B1;
+  //   a {
+  //     color:#fff;
+  //   }
+  // } 
  
   .block3 {
     width: 270px;

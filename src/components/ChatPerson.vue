@@ -1,6 +1,9 @@
 <template>
 	<div class="d-flex info first">
-		<div class="photo"><img :src="person.img" :alt="person.name"></div>
+		<div class="photo">
+			<img :src="person.img" :alt="person.name">
+			<div class="greenDot"></div>
+		</div>
 		<div class="script">
 				<p class="f-14">{{ person.name }}</p>
 				<p class="f-12">{{ person.message }}</p>
@@ -25,6 +28,15 @@
 			.photo {
 				width: 52px;
 				margin-right: 15px;
+				.greenDot {
+					width: 9px;
+					height: 9px;
+					border-radius: 50%;
+					position: absolute;
+					left: calc(51% - 9px / 2 - 515.5px);
+					top: 219px;
+					background: linear-gradient(180deg, #02B033 0%, #08A534 100%);
+				}
 			} 
 			.script {
 				p {
