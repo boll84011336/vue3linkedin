@@ -2,7 +2,7 @@
 	<div class="d-flex info first">
 		<div class="photo">
 			<img :src="person.img" :alt="person.name">
-			<div class="greenDot"></div>
+			<div class="greenDot" :style="person.dotStyle"></div>
 		</div>
 		<div class="script">
 				<p class="f-14">{{ person.name }}</p>
@@ -33,9 +33,19 @@
 					height: 9px;
 					border-radius: 50%;
 					position: absolute;
-					left: calc(51% - 9px / 2 - 515.5px);
-					top: 219px;
-					background: linear-gradient(180deg, #02B033 0%, #08A534 100%);
+					left: calc(51% - 532px);
+					top: 217px;
+					// background: linear-gradient(180deg, #02B033 0%, #08A534 100%);
+				}
+				.add {
+					box-sizing: border-box;
+					position: absolute;
+					width: 9px;
+					height: 9px;
+					left: calc(50% - 9px/2 - 520.5px);
+					top: 400px;
+					background: #FFFFFF;
+					border: 1.5px solid #02B033;
 				}
 			} 
 			.script {
